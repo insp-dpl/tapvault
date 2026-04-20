@@ -4,6 +4,13 @@ class DeviseCreateMerchants < ActiveRecord::Migration[7.1]
   def change
     create_table :merchants do |t|
       ## Database authenticatable
+      ## Custom fields
+      t.string :business_name, null: false
+      t.string :phone
+      t.string :address
+      t.string :country
+      t.string :approval_status, default: 'pending', null: false
+      t.string :stripe_account_id
       t.string :email,              null: false, default: ""
       t.string :encrypted_password, null: false, default: ""
 
