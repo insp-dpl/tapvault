@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  customer: one
+  merchant: one
+  terminal: one
+  card: one
+  amount_cents: 1
+  currency: MyString
+  status: MyString
+  stripe_payment_intent_id: MyString
+
+two:
+  customer: two
+  merchant: two
+  terminal: two
+  card: two
+  amount_cents: 1
+  currency: MyString
+  status: MyString
+  stripe_payment_intent_id: MyString
