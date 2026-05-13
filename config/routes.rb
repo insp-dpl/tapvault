@@ -2,22 +2,24 @@ Rails.application.routes.draw do
   get "up" => "rails/health#show", as: :rails_health_check
   
   devise_for :merchants,
-    path: "api/v1/auth/merchants",
+    path: "api/v1/auth/merchant",
     path_names: {
-      sign_in: "sign_in",
-      sign_out: "sign_out",
-      registration: "sign_up"
+      sign_in: "login",
+      sign_out: "logout",
+      registration: "",
+      sign_up: "signup"
     },
     controllers: {
     sessions: "merchants/sessions",
     registrations: "merchants/registrations"
   }
   devise_for :customers,
-    path: "api/v1/auth/customers",
+    path: "api/v1/auth/customer",
     path_names: {
-      sign_in: "sign_in",
-      sign_out: "sign_out",
-      registration: "sign_up"
+      sign_in: "login",
+      sign_out: "logout",
+      registration: "",
+      sign_up: "signup"
     },
     controllers: {
       sessions: "customers/sessions",
